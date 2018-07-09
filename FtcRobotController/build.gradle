@@ -22,12 +22,17 @@ android {
 
 repositories {
     flatDir {
-        dirs '../libs'
+        dirs rootProject.file('libs')
     }
-    mavenCentral()
 }
 
-apply from: 'build.release.gradle'
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    compile(name: 'Inspection-release', ext: 'aar')
+    compile(name: 'Blocks-release', ext: 'aar')
+    compile(name: 'RobotCore-release', ext: 'aar')
+    compile(name: 'Hardware-release', ext: 'aar')
+    compile(name: 'FtcCommon-release', ext: 'aar')
+    compile(name: 'Analytics-release', ext: 'aar')
+    compile(name: 'WirelessP2p-release', ext: 'aar')
 }

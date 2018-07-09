@@ -14,3 +14,14 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
+
+allprojects {
+    repositories {
+        flatDir {
+            dirs rootProject.file('libs')
+        }
+        mavenCentral()
+        jcenter()
+        google()
+    }
+}
