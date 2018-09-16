@@ -1,0 +1,3 @@
+package org.firstinspires.ftc.robotcontroller.internal.classfilter
+
+annotation class FilteringClass
